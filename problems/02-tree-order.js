@@ -3,6 +3,10 @@
 // traversal.
 function preOrderArray(root) {
     // Your code here
+    if (!root) {
+        return [];
+    }
+    return [root.val, ...preOrderArray(root.left), ...preOrderArray(root.right)];
 }
 
 // Implement a function that takes the root of a Binary Tree
@@ -10,6 +14,10 @@ function preOrderArray(root) {
 // traversal.
 function inOrderArray(root) {
     // Your code here
+    if (!root) {
+        return [];
+    }
+    return [...inOrderArray(root.left), root.val, ...inOrderArray(root.right)];
 }
 
 // Implement a function that takes the root of a Binary Tree
