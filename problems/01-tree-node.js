@@ -8,10 +8,6 @@ class TreeNode {
         this.right = null;
         this.left = null;
     }
-
-    
-
-
 }
 
 module.exports = {

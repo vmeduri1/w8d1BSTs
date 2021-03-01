@@ -24,7 +24,10 @@ function inOrderArray(root) {
 // and returns an array containing the values from a post-order
 // traversal.
 function postOrderArray(root) {
-    // Your code here
+    if (!root) {
+        return [];
+    }
+    return [...postOrderArray(root.left), ...postOrderArray(root.right), root.val];
 }
 
 
